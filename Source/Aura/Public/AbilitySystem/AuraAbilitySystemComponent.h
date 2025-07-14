@@ -18,5 +18,6 @@ public:
 	void AbilityActorInfoSet();
 
 protected:
-	void EffectApplied(UAbilitySystemComponent* AbilitySystemComponent, const FGameplayEffectSpec& EffectSpec, FActiveGameplayEffectHandle ActiveEffectHandle);
+	void EffectApplied(UAbilitySystemComponent* AbilitySystemComponent, const FGameplayEffectSpec& EffectSpec,
+	                   FActiveGameplayEffectHandle ActiveEffectHandle);
 };
