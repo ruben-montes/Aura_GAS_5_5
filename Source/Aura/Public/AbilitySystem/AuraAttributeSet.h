@@ -19,13 +19,15 @@ struct FEffectProperties
 {
 	GENERATED_BODY()
 
-	FEffectProperties() {}
+	FEffectProperties()
+	{
+	}
 
 	FGameplayEffectContextHandle EffectContextHandle;
 
 	UPROPERTY()
 	UAbilitySystemComponent* SourceASC = nullptr;
-	
+
 	UPROPERTY()
 	AActor* SourceAvatarActor = nullptr;
 
@@ -37,7 +39,7 @@ struct FEffectProperties
 
 	UPROPERTY()
 	UAbilitySystemComponent* TargetASC = nullptr;
-	
+
 	UPROPERTY()
 	AActor* TargetAvatarActor = nullptr;
 
@@ -65,7 +67,7 @@ public:
 	UPROPERTY(BlueprintReadOnly, Replicated, ReplicatedUsing = "OnRep_Health", Category = "Vital Attributes")
 	FGameplayAttributeData Health;
 	ATTRIBUTE_ACCESSORS(UAuraAttributeSet, Health);
-	
+
 	UPROPERTY(BlueprintReadOnly, Replicated, ReplicatedUsing = "OnRep_MaxHealth", Category = "Vital Attributes")
 	FGameplayAttributeData MaxHealth;
 	ATTRIBUTE_ACCESSORS(UAuraAttributeSet, MaxHealth);
@@ -73,7 +75,7 @@ public:
 	UPROPERTY(BlueprintReadOnly, Replicated, ReplicatedUsing = "OnRep_Mana", Category = "Vital Attributes")
 	FGameplayAttributeData Mana;
 	ATTRIBUTE_ACCESSORS(UAuraAttributeSet, Mana);
-	
+
 	UPROPERTY(BlueprintReadOnly, Replicated, ReplicatedUsing = "OnRep_MaxMana", Category = "Vital Attributes")
 	FGameplayAttributeData MaxMana;
 	ATTRIBUTE_ACCESSORS(UAuraAttributeSet, MaxMana);
